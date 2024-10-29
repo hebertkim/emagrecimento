@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkemagrecimento"]=self["webpackChunkemagrecimento"]||[]).push([[594],{166:function(e,n,r){r.r(n),r.d(n,{default:function(){return f}});var u=r(6768);function t(e,n){return(0,u.uX)(),(0,u.CE)("h1",null,"About")}var c=r(1241);const a={},o=(0,c.A)(a,[["render",t]]);var f=o}}]);
+//# sourceMappingURL=about.bb7ff0fa.js.map
