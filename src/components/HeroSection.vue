@@ -68,10 +68,25 @@ export default {
   },
   methods: {
     submitForm() {
-      // Substitua com a lógica de submissão, como API ou armazenamento no Firebase
-      alert(
-        `Obrigado, ${this.name}! Enviaremos o link do eBook para o seu email.`
-      );
+      // Criar uma mensagem interessante com ícones e emojis
+      const message = `🌟 Olá! Meu nome é *${this.name}*.\n` +
+                      `📧 Meu email é *${this.email}*.\n` +
+                      `📞 Meu telefone é *${this.phone}*.\n\n` +
+                      `📚 Gostaria de receber o *eBook gratuito* e entrar no grupo! 🔥\n` +
+                      `💪 Vamos juntos na jornada do emagrecimento saudável!`;
+
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappNumber = '+5541996454466';
+      const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+      // Redirecionar para o WhatsApp
+      window.open(whatsappLink, '_blank');
+
+      // Redirecionar para o grupo após abrir o WhatsApp
+      setTimeout(() => {
+        window.open('https://chat.whatsapp.com/JIiiTgRc3mo2l7wZxJcgqb', '_blank');
+      }, 2000); // Espera 2 segundos antes de abrir o grupo
+
       // Resetar os campos
       this.name = '';
       this.email = '';
